@@ -49,5 +49,10 @@ namespace newDemo
             //comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Add New text on FormLoad";
+        }
     }
 }
