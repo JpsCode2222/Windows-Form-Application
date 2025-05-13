@@ -103,5 +103,16 @@ namespace newDemo
                 label4.Text = "radioButton4 is Checked";
             }
         }
+
+        private void startDownloadProgress(object sender, EventArgs e)
+        {
+            for (int i = 0; i<= 100; i++)
+            {
+                progressBar1.Value = i;
+                progressBar2.Value = i;
+                progressBar3.Value = i;
+                System.Threading.Thread.Sleep(100);
+            }
         }
+    }
 }

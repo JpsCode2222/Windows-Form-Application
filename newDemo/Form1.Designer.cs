@@ -51,6 +51,10 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.button8 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,11 +277,48 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "data";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(23, 257);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(363, 16);
+            this.progressBar1.TabIndex = 22;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(23, 279);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(363, 16);
+            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar2.TabIndex = 23;
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(23, 301);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(363, 16);
+            this.progressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar3.TabIndex = 24;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(138, 323);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(111, 23);
+            this.button9.TabIndex = 25;
+            this.button9.Text = "Download";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.startDownloadProgress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 484);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.progressBar3);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.radioButton3);
@@ -334,6 +375,10 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.Button button9;
     }
 }
 
