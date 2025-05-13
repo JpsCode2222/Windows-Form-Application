@@ -212,5 +212,16 @@ namespace newDemo
         {
             searchTxt.Text = webBrowser1.Url.ToString();
         }
+
+        private void loadTxtFileData(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*) | *.*";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //txtFile.Text = openFileDialog1.FileName; 
+                txtFile.Text = System.IO.File.ReadAllText(openFileDialog1.FileName); 
+            }
+        }
     }
 }

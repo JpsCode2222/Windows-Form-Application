@@ -86,6 +86,9 @@
             this.refreshBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button12 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtFile = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -627,11 +630,35 @@
             this.webBrowser1.TabIndex = 37;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.onNavigated);
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(608, 877);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(143, 23);
+            this.button12.TabIndex = 33;
+            this.button12.Text = "Load Txt File Data";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.loadTxtFileData);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtFile
+            // 
+            this.txtFile.Location = new System.Drawing.Point(18, 691);
+            this.txtFile.Multiline = true;
+            this.txtFile.Name = "txtFile";
+            this.txtFile.Size = new System.Drawing.Size(733, 180);
+            this.txtFile.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 707);
+            this.ClientSize = new System.Drawing.Size(1481, 986);
+            this.Controls.Add(this.txtFile);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.WebBrowserBox);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.dataGridView1);
@@ -742,6 +769,9 @@
         private System.Windows.Forms.Button forwardBtn;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button navigateBtn;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtFile;
     }
 }
 
