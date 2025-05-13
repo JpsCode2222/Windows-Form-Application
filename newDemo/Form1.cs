@@ -53,6 +53,7 @@ namespace newDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             label1.Text = "Add New text on FormLoad";
+            radioButton2.Checked = true;
         }
 
         private void addDateTimeToLable(object sender, EventArgs e)
@@ -82,5 +83,25 @@ namespace newDemo
             //pictureBox1.Load("chart.png");
             //pictureBox1.Image = Image.FromFile("chart.png");
         }
-    }
+
+        private void selectRadioButton(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                label4.Text = "radioButton1 is Checked";
+            }
+            else if (radioButton2.Checked)
+            {
+                label4.Text = "radioButton2 is Checked";
+            }
+            else if (radioButton3.Checked)
+            {
+                label4.Text = "radioButton3 is Checked";
+            }
+            else
+            {
+                label4.Text = "radioButton4 is Checked";
+            }
+        }
+        }
 }
