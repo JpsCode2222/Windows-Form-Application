@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,20 +57,21 @@
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.loginUsername = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.SignupBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.loginPassword = new System.Windows.Forms.TextBox();
-            this.SignupBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.loginUsername = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -337,15 +339,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // radioButton5
+            // radioButton7
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(20, 21);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(103, 20);
-            this.radioButton5.TabIndex = 19;
-            this.radioButton5.Text = "radioButton5";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(20, 73);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(103, 20);
+            this.radioButton7.TabIndex = 21;
+            this.radioButton7.Text = "radioButton7";
+            this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton6
             // 
@@ -357,15 +359,15 @@
             this.radioButton6.Text = "radioButton6";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // radioButton5
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(20, 73);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(103, 20);
-            this.radioButton7.TabIndex = 21;
-            this.radioButton7.Text = "radioButton7";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(20, 21);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(103, 20);
+            this.radioButton5.TabIndex = 19;
+            this.radioButton5.Text = "radioButton5";
+            this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -433,21 +435,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Admin Login ";
             // 
-            // loginUsername
+            // SignupBtn
             // 
-            this.loginUsername.Location = new System.Drawing.Point(24, 67);
-            this.loginUsername.Name = "loginUsername";
-            this.loginUsername.Size = new System.Drawing.Size(238, 22);
-            this.loginUsername.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "User name";
+            this.SignupBtn.Location = new System.Drawing.Point(84, 173);
+            this.SignupBtn.Name = "SignupBtn";
+            this.SignupBtn.Size = new System.Drawing.Size(108, 23);
+            this.SignupBtn.TabIndex = 30;
+            this.SignupBtn.Text = "Sign Up";
+            this.SignupBtn.UseVisualStyleBackColor = true;
+            this.SignupBtn.Click += new System.EventHandler(this.signUp);
             // 
             // label6
             // 
@@ -465,15 +461,26 @@
             this.loginPassword.Size = new System.Drawing.Size(238, 22);
             this.loginPassword.TabIndex = 31;
             // 
-            // SignupBtn
+            // label5
             // 
-            this.SignupBtn.Location = new System.Drawing.Point(84, 173);
-            this.SignupBtn.Name = "SignupBtn";
-            this.SignupBtn.Size = new System.Drawing.Size(108, 23);
-            this.SignupBtn.TabIndex = 30;
-            this.SignupBtn.Text = "Sign Up";
-            this.SignupBtn.UseVisualStyleBackColor = true;
-            this.SignupBtn.Click += new System.EventHandler(this.signUp);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "User name";
+            // 
+            // loginUsername
+            // 
+            this.loginUsername.Location = new System.Drawing.Point(24, 67);
+            this.loginUsername.Name = "loginUsername";
+            this.loginUsername.Size = new System.Drawing.Size(238, 22);
+            this.loginUsername.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -569,6 +576,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox loginPassword;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

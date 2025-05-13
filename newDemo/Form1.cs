@@ -56,6 +56,7 @@ namespace newDemo
         {
             label1.Text = "Add New text on FormLoad";
             radioButton2.Checked = true;
+            timer1.Start();
         }
 
         private void addDateTimeToLable(object sender, EventArgs e)
@@ -160,6 +161,14 @@ namespace newDemo
                     errorProvider2.Clear();
                 }
 
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(progressBar2.Value <= 100)
+            {
+                progressBar2.Value += 1;
             }
         }
     }
