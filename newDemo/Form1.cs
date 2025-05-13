@@ -114,5 +114,14 @@ namespace newDemo
                 System.Threading.Thread.Sleep(100);
             }
         }
+
+        private void openDailogMessageBox(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit", "Inforamtion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
