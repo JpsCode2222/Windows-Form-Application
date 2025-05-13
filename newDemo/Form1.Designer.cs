@@ -89,6 +89,8 @@
             this.button12 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtFile = new System.Windows.Forms.TextBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -652,11 +654,22 @@
             this.txtFile.Size = new System.Drawing.Size(733, 180);
             this.txtFile.TabIndex = 34;
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(341, 877);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(261, 23);
+            this.button13.TabIndex = 35;
+            this.button13.Text = "Save txt file data after change in above";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.saveFiledialogData);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1481, 986);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.txtFile);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.WebBrowserBox);
@@ -772,6 +785,8 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtFile;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

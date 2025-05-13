@@ -215,12 +215,22 @@ namespace newDemo
 
         private void loadTxtFileData(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*) | *.*";
+            openFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
 
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 //txtFile.Text = openFileDialog1.FileName; 
                 txtFile.Text = System.IO.File.ReadAllText(openFileDialog1.FileName); 
+            }
+        }
+
+        private void saveFiledialogData(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog1.FileName;
+                System.IO.File.WriteAllText(fileName, txtFile.Text);
             }
         }
     }
