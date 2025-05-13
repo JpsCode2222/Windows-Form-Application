@@ -15,6 +15,8 @@ namespace newDemo
     public partial class Form1 : Form
     {
         private int counter = 5;
+        private object errorProvider1;
+
         public Form1()
         {
             InitializeComponent();
@@ -121,6 +123,43 @@ namespace newDemo
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void signUp(object sender, EventArgs e)
+        {
+            string user = "admin";
+            string pass = "admin";
+            var errorProvider1 = new ErrorProvider();
+            var errorProvider2 = new ErrorProvider();
+
+            if (loginUsername.Text.Equals(user) && loginPassword.Text.Equals(user))
+            {
+                MessageBox.Show("Login Successfull", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                errorProvider1.Clear();
+                errorProvider2.Clear();
+            }
+            else
+            {
+                
+                if (loginUsername.Text != user)
+                {
+                    errorProvider1.SetError(loginUsername, "incorrect username");
+                }
+                else
+                {
+                    errorProvider1.Clear();  
+                }
+
+
+                if (loginPassword.Text != pass)
+                {
+                    errorProvider2.SetError(loginPassword, "incorrect username");
+                }
+                else{
+                    errorProvider2.Clear();
+                }
+
             }
         }
     }

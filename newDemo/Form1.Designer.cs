@@ -64,9 +64,16 @@
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.button10 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.loginUsername = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.loginPassword = new System.Windows.Forms.TextBox();
+            this.SignupBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -243,7 +250,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(103, 20);
             this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "radioButton2";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -254,7 +260,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(103, 20);
             this.radioButton3.TabIndex = 19;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "radioButton3";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -265,7 +270,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(103, 20);
             this.radioButton4.TabIndex = 18;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "radioButton4";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -415,11 +419,68 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.openDailogMessageBox);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.SignupBtn);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.loginPassword);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.loginUsername);
+            this.groupBox3.Location = new System.Drawing.Point(788, 357);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(286, 222);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Admin Login ";
+            // 
+            // loginUsername
+            // 
+            this.loginUsername.Location = new System.Drawing.Point(24, 67);
+            this.loginUsername.Name = "loginUsername";
+            this.loginUsername.Size = new System.Drawing.Size(238, 22);
+            this.loginUsername.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "User name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Password";
+            // 
+            // loginPassword
+            // 
+            this.loginPassword.Location = new System.Drawing.Point(24, 125);
+            this.loginPassword.Name = "loginPassword";
+            this.loginPassword.Size = new System.Drawing.Size(238, 22);
+            this.loginPassword.TabIndex = 31;
+            // 
+            // SignupBtn
+            // 
+            this.SignupBtn.Location = new System.Drawing.Point(84, 173);
+            this.SignupBtn.Name = "SignupBtn";
+            this.SignupBtn.Size = new System.Drawing.Size(108, 23);
+            this.SignupBtn.TabIndex = 30;
+            this.SignupBtn.Text = "Sign Up";
+            this.SignupBtn.UseVisualStyleBackColor = true;
+            this.SignupBtn.Click += new System.EventHandler(this.signUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 484);
+            this.ClientSize = new System.Drawing.Size(1086, 707);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -457,6 +518,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,6 +563,12 @@
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox loginUsername;
+        private System.Windows.Forms.Button SignupBtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox loginPassword;
+        private System.Windows.Forms.Label label5;
     }
 }
 
