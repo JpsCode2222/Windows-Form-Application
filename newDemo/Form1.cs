@@ -57,6 +57,12 @@ namespace newDemo
             label1.Text = "Add New text on FormLoad";
             radioButton2.Checked = true;
             timer1.Start();
+
+            // Add data to datgrid
+            dataGridView1.Rows.Add("Jayad", "Pathan", 80, "Ahmednagar", "2002-12-22");
+            dataGridView1.Rows.Add("Jayad", "Pathan", 80, "Ahmednagar", "2002-12-22");
+            dataGridView1.Rows.Add("Jayad", "Pathan", 80, "Ahmednagar", "2002-12-22");
+            dataGridView1.Rows.Add("Jayad", "Pathan", 80, "Ahmednagar", "2002-12-22");
         }
 
         private void addDateTimeToLable(object sender, EventArgs e)
@@ -170,6 +176,16 @@ namespace newDemo
             {
                 progressBar2.Value += 1;
             }
+            if(progressBar2.Value == 100)
+            {
+                timer1.Stop();
+            }
+        }
+
+        private void removeSelectedDataFromDataGridView(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+            //dataGridView1.Rows.RemoveAt(1);
         }
     }
 }
