@@ -24,5 +24,14 @@ namespace newDemo
                 Application.Exit();
             }
         }
+
+        private void btnColorChange(object sender, EventArgs e)
+        {
+            DialogResult = colorDialog1.ShowDialog();
+            if(DialogResult == DialogResult.OK)
+            {
+                button1.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }
