@@ -54,5 +54,11 @@ namespace newDemo
         {
             label1.Text = "Add New text on FormLoad";
         }
+
+        private void addDateTimeToLable(object sender, EventArgs e)
+        {
+            MessageBox.Show(DateTime.Now.ToString());
+            label2.Text = dateTimePicker1.Value.ToString("yyyy-MMM-dd");
+        }
     }
 }
