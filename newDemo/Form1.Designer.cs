@@ -38,6 +38,11 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.password2 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -131,11 +136,61 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.addDateTimeToLable);
             // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(18, 180);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(100, 22);
+            this.password.TabIndex = 9;
+            this.password.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Password";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(18, 208);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Login";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.addPasswordToLable);
+            // 
+            // password2
+            // 
+            this.password2.Location = new System.Drawing.Point(124, 180);
+            this.password2.Name = "password2";
+            this.password2.Size = new System.Drawing.Size(100, 22);
+            this.password2.TabIndex = 12;
+            this.password2.UseSystemPasswordChar = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(230, 180);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(156, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Check Password";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.checkPassword);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 484);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.password2);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
@@ -165,6 +220,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox password2;
+        private System.Windows.Forms.Button button6;
     }
 }
 

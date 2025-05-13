@@ -60,5 +60,21 @@ namespace newDemo
             MessageBox.Show(DateTime.Now.ToString());
             label2.Text = dateTimePicker1.Value.ToString("yyyy-MMM-dd");
         }
+
+        private void addPasswordToLable(object sender, EventArgs e)
+        {
+            label3.Text = password.Text;
+        }
+
+        private void checkPassword(object sender, EventArgs e)
+        {
+            if (password.Text == password2.Text) {
+                MessageBox.Show("Password Match : " + password.Text);
+            }
+            else
+            {
+                MessageBox.Show("Error : Password not match");
+            }
+        }
     }
 }
