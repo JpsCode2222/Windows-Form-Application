@@ -76,5 +76,11 @@ namespace newDemo
                 MessageBox.Show("Error : Password not match");
             }
         }
+
+        private void loadImage(object sender, EventArgs e)
+        {
+            //pictureBox1.Load("chart.png");
+            //pictureBox1.Image = Image.FromFile("chart.png");
+        }
     }
 }
