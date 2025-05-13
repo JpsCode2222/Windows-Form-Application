@@ -187,5 +187,30 @@ namespace newDemo
             dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
             //dataGridView1.Rows.RemoveAt(1);
         }
+
+        private void navigate(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(searchTxt.Text);
+        }
+
+        private void back(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void forward(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void refresh(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
+
+        private void onNavigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            searchTxt.Text = webBrowser1.Url.ToString();
+        }
     }
 }
