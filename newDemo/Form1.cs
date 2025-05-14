@@ -227,11 +227,42 @@ namespace newDemo
         private void saveFiledialogData(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string fileName = saveFileDialog1.FileName;
+                string fileName = saveFileDialog1.FileName; 
                 System.IO.File.WriteAllText(fileName, txtFile.Text);
             }
+        }
+
+        private void openFileDialog(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Open File");
+            }
+        }
+
+        private void saveFileDialogFilter(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Save File");
+            }
+        }
+
+        private void openFileusingToolStrip(object sender, EventArgs e)
+        {
+            openFileDialog(sender, e);
+        }
+
+        private void saveFileusingToolStrip(object sender, EventArgs e)
+        {
+            saveFileDialogFilter(sender, e); 
         }
     }
 }
