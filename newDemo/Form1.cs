@@ -264,5 +264,10 @@ namespace newDemo
         {
             saveFileDialogFilter(sender, e); 
         }
+
+        private void rigthClickonCopy(object sender, EventArgs e)
+        {
+            MessageBox.Show("Copying...");
+        }
     }
 }
