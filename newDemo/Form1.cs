@@ -269,5 +269,10 @@ namespace newDemo
         {
             MessageBox.Show("Copying...");
         }
+
+        private void viewMastTextBox(object sender, EventArgs e)
+        {
+            MessageBox.Show(maskedTextBox1.Text);
+        }
     }
 }
